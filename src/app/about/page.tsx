@@ -142,6 +142,17 @@ export default function About() {
                 />
               </Row>
             )}
+            {about.cv.display && (
+              <Column fillWidth marginBottom="m" className={styles.blockAlign}>
+                <Button
+                  href={about.cv.file}
+                  prefixIcon="download"
+                  label={about.cv.label}
+                  size="m"
+                  variant="secondary"
+                />
+              </Column>
+            )}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>

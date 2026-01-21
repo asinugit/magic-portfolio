@@ -127,6 +127,15 @@ export interface About extends BasePageConfig {
     /** Link to the calendar */
     link: string;
   };
+  /** CV download section configuration */
+  cv: {
+    /** Whether to display the CV download button */
+    display: boolean;
+    /** Path to the CV file in the public folder */
+    file: string;
+    /** Label for the download button */
+    label: string;
+  };
   /** Introduction section */
   intro: {
     /** Whether to display the introduction */
