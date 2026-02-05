@@ -60,9 +60,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Asinu Kumarage</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,8 +76,8 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Asinuuu, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Hello! I'm Asinu, a passionate Software Engineer specializing in web development and designing intuitive user experiences. I love building innovative solutions and exploring new technologies.
+    </>
   ),
 };
 
@@ -182,36 +182,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Using Now",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>My primary tech stack for building modern web and mobile applications.</>
         ),
         tags: [
           {
@@ -219,23 +192,65 @@ const about: About = {
             icon: "javascript",
           },
           {
+            name: "React",
+            icon: "react",
+          },
+          {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "HTML",
+            icon: "html",
           },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "CSS",
+            icon: "css",
           },
         ],
+        images: [],
+      },
+      {
+        title: "Learning & Exploring",
+        description: (
+          <>Technologies I'm currently learning and exploring for future projects.</>
+        ),
+        tags: [
+          {
+            name: "PHP",
+            icon: "php",
+          },
+          {
+            name: "Flutter",
+            icon: "flutter",
+          },
+          {
+            name: "Dart",
+            icon: "dart",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Mobile Development",
+        description: (
+          <>Cross-platform mobile development technologies.</>
+        ),
+        tags: [
+          {
+            name: "Flutter",
+            icon: "flutter",
+          },
+          {
+            name: "Kotlin",
+            icon: "kotlin",
+          },
+          {
+            name: "Dart",
+            icon: "dart",
+          },
+        ],
+        images: [],
       },
     ],
   },
