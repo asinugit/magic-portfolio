@@ -114,7 +114,7 @@ export default function Home() {
           <Button
             id="scroll-about"
             href={about.path}
-            variant="ghost"
+            variant="tertiary"
             size="m"
             weight="default"
             arrowIcon
