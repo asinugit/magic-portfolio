@@ -99,7 +99,7 @@ const about: About = {
   },
   cv: {
     display: true,
-    file: "/cv/asinuCV.pdf",
+    file: "/cv/asinuCv.pdf",
     label: "Download CV",
   },
   intro: {

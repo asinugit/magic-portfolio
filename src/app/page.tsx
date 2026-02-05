@@ -68,17 +68,7 @@ export default function Home() {
                 >
                   GitHub
                 </Button>
-                <Button
-                  id="cv"
-                  data-border="rounded"
-                  href="/cv/asinuCV.pdf"
-                  variant="secondary"
-                  size="l"
-                  weight="default"
-                  prefixIcon="download"
-                >
-                  Download CV
-                </Button>
+
                 <Button
                   id="hire"
                   data-border="rounded"
