@@ -72,7 +72,7 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
       </Row>
       
       
-      <Row fillWidth wrap gap="l" marginBottom="40" paddingX="l" horizontal="center">
+      <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
         {filteredProjects.length === 0 ? (
           <Column fillWidth horizontal="center" paddingY="xl" gap="m">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -85,22 +85,21 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
           </Column>
         ) : (
           filteredProjects.map((post, index) => (
-            <Column key={post.slug} maxWidth="320" minWidth="280">
-              <ProjectCard
-                priority={index < 2}
-                href={`/work/${post.slug}`}
-                images={post.metadata.images}
-                title={post.metadata.title}
-                description={post.metadata.summary}
-                content={post.content}
-                avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-                link={post.metadata.link || ""}
-                category={post.metadata.category}
-              />
-            </Column>
+            <ProjectCard
+              priority={index < 2}
+              key={post.slug}
+              href={`/work/${post.slug}`}
+              images={post.metadata.images}
+              title={post.metadata.title}
+              description={post.metadata.summary}
+              content={post.content}
+              avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
+              link={post.metadata.link || ""}
+              category={post.metadata.category}
+            />
           ))
         )}
-      </Row>
+      </Column>
     </>
   );
 }
