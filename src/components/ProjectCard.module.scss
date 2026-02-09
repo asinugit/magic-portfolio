@@ -1,0 +1,8 @@
+.projectCard {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-8px);
+    opacity: 0.9;
+  }
+}

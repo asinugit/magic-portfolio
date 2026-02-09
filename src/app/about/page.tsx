@@ -142,17 +142,6 @@ export default function About() {
                 />
               </Row>
             )}
-            {about.cv.display && (
-              <Column fillWidth marginBottom="m" className={styles.blockAlign}>
-                <Button
-                  href={about.cv.file}
-                  prefixIcon="download"
-                  label={about.cv.label}
-                  size="m"
-                  variant="secondary"
-                />
-              </Column>
-            )}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -252,15 +241,14 @@ export default function About() {
                             key={index}
                             border="neutral-medium"
                             radius="m"
-                            minWidth={image.width}
-                            height={image.height}
+                            style={{ width: "100%", maxWidth: "360px" }}
                           >
                             <Media
                               enlarge
                               radius="m"
-                              sizes={image.width.toString()}
                               alt={image.alt}
                               src={image.src}
+                              style={{ width: "100%", height: "auto", objectFit: "contain" }}
                             />
                           </Row>
                         ))}
@@ -327,15 +315,14 @@ export default function About() {
                             key={index}
                             border="neutral-medium"
                             radius="m"
-                            minWidth={image.width}
-                            height={image.height}
+                            style={{ width: "100%", maxWidth: "360px" }}
                           >
                             <Media
                               enlarge
                               radius="m"
-                              sizes={image.width.toString()}
                               alt={image.alt}
                               src={image.src}
+                              style={{ width: "100%", height: "auto", objectFit: "contain" }}
                             />
                           </Row>
                         ))}
