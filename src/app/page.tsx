@@ -71,7 +71,7 @@ export default function Home() {
                 <Button
                   id="cv"
                   data-border="rounded"
-                  href="/cv/asinuCV.pdf"
+                  href="/cv/asinuCv.pdf"
                   variant="secondary"
                   size="l"
                   weight="default"
