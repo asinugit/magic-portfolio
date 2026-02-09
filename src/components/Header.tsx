@@ -47,7 +47,7 @@ export const Header = () => {
 
   return (
     <>
-      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
+      <Fade s={{ hide: true }} fillWidth position="fixed" height="140" zIndex={9} />
       <Fade
         hide
         s={{ hide: false }}
@@ -55,7 +55,7 @@ export const Header = () => {
         position="fixed"
         bottom="0"
         to="top"
-        height="80"
+        height="140"
         zIndex={9}
       />
       <Row
@@ -147,6 +147,20 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <Row s={{ hide: true }}>
+                <ToggleButton
+                  prefixIcon="email"
+                  href={`mailto:${person.email}`}
+                  label="Contact"
+                />
+              </Row>
+              <Row hide s={{ hide: false }}>
+                <ToggleButton
+                  prefixIcon="email"
+                  href={`mailto:${person.email}`}
+                />
+              </Row>
               {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>

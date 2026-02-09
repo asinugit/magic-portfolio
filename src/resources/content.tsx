@@ -38,12 +38,6 @@ const social: Social = [
     name: "Instagram",
     icon: "instagram",
     link: "https://www.instagram.com/asinuu._/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
     essential: true,
   },
   {
@@ -99,7 +93,7 @@ const about: About = {
   },
   cv: {
     display: true,
-    file: "/cv/asinuCv.pdf",
+    file: "/cv/asinuCV.pdf",
     label: "Download CV",
   },
   intro: {
@@ -107,55 +101,34 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Motivated and adaptable third-year undergraduate pursuing a BSc (Hons) in Information
+        Technology with a specialization in Software Engineering at SLIIT. Passionate about solving
+        real-world problems at the intersection of full stack development and app development. Strong
+        foundation in web development, mobile app and UI design.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Projects",
+    title: "Certificates and Licenses",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Node.js",
+        timeframe: "2024",
+        role: "Certified Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Official certification demonstrating expertise in Node.js runtime environment, server-side JavaScript development, and modern backend technologies.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/certificate/node.jpeg",
+            alt: "Node.js Certificate",
             width: 16,
             height: 9,
           },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
