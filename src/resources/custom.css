@@ -55,10 +55,28 @@
 
 /* Responsive button styles */
 @media (max-width: 768px) {
-  .button-container .responsive-button {
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     width: 100%;
+  }
+  
+  .button-container .responsive-button {
+    flex: 1;
     min-height: 44px;
-    font-size: 14px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  /* Make icons smaller on mobile */
+  .button-container .responsive-button [data-icon] {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .button-container .responsive-button span {
+    font-size: 12px;
   }
 }
 

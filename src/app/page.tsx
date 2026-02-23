@@ -59,7 +59,6 @@ export default function Home() {
               <Row 
                 gap="12" 
                 s={{ 
-                  direction: 'column', 
                   gap: '8', 
                   fillWidth: true 
                 }}
