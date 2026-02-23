@@ -52,3 +52,19 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Responsive button styles */
+@media (max-width: 768px) {
+  .button-container .responsive-button {
+    width: 100%;
+    min-height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .responsive-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

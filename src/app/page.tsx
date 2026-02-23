@@ -56,7 +56,15 @@ export default function Home() {
               </Text>
             </RevealFx>
             <RevealFx delay={0.4}>
-              <Row gap="12">
+              <Row 
+                gap="12" 
+                s={{ 
+                  direction: 'column', 
+                  gap: '8', 
+                  fillWidth: true 
+                }}
+                className="button-container"
+              >
                 <Button
                   id="github"
                   data-border="rounded"
@@ -65,6 +73,7 @@ export default function Home() {
                   size="l"
                   weight="default"
                   prefixIcon="github"
+                  className="responsive-button"
                 >
                   GitHub
                 </Button>
@@ -76,6 +85,7 @@ export default function Home() {
                   size="l"
                   weight="default"
                   prefixIcon="download"
+                  className="responsive-button"
                 >
                   Download CV
                 </Button>
@@ -87,6 +97,7 @@ export default function Home() {
                   size="l"
                   weight="default"
                   prefixIcon="email"
+                  className="responsive-button"
                 >
                   Hire Me
                 </Button>

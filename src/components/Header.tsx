@@ -76,9 +76,26 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton 
+                      prefixIcon="home" 
+                      href="/" 
+                      label="Home"
+                      selected={pathname === "/"} 
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="home"
+                      href="/"
+                      label="Home"
+                      selected={pathname === "/"}
+                    />
+                  </Row>
+                </>
               )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <Line background="neutral-alpha-medium" vert maxHeight="24" s={{ hide: true }} />
               {routes["/about"] && (
                 <>
                   <Row s={{ hide: true }}>
@@ -93,6 +110,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="person"
                       href="/about"
+                      label={about.label}
                       selected={pathname === "/about"}
                     />
                   </Row>
@@ -112,6 +130,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
+                      label={work.label}
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
@@ -136,7 +155,7 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <Line background="neutral-alpha-medium" vert maxHeight="24" s={{ hide: true }} />
               <Row s={{ hide: true }}>
                 <ToggleButton
                   prefixIcon="email"
@@ -148,6 +167,7 @@ export const Header = () => {
                 <ToggleButton
                   prefixIcon="email"
                   href={`mailto:${person.email}`}
+                  label="Contact"
                 />
               </Row>
               {routes["/gallery"] && (

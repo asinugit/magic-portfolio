@@ -12,6 +12,20 @@
     .position {
         top: auto;
         bottom: var(--static-space-24);
+        padding: var(--static-space-12) var(--static-space-8);
+        
+        // Make navigation bigger on mobile
+        button {
+            min-height: 48px;
+            padding: var(--static-space-8) var(--static-space-12);
+            font-size: var(--label-default-s-font-size);
+        }
+        
+        // Ensure navigation container has proper spacing
+        > div > div {
+            padding: var(--static-space-8);
+            gap: var(--static-space-8);
+        }
     }
 
     .mask {

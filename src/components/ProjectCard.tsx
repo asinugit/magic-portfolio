@@ -20,6 +20,7 @@ interface ProjectCardProps {
   avatars: { src: string }[];
   link: string;
   category?: string;
+  figmaUrl?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -31,6 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
   category,
+  figmaUrl,
 }) => {
   return (
     <Column fillWidth gap="m">
@@ -79,6 +81,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={href}
                 >
                   <Text variant="body-default-s">Read case study</Text>
+                </SmartLink>
+              )}
+              {true && (
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={figmaUrl || "https://figma.com"}
+                >
+                  <Text variant="body-default-s">View in Figma</Text>
                 </SmartLink>
               )}
               {link && (

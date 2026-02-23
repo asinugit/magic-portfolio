@@ -20,6 +20,7 @@ type Metadata = {
   team: Team[];
   link?: string;
   category?: string;
+  figmaUrl?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -51,6 +52,7 @@ function readMDXFile(filePath: string) {
     team: data.team || [],
     link: data.link || "",
     category: data.category || "",
+    figmaUrl: data.figmaUrl || "",
   };
 
   return { metadata, content };
