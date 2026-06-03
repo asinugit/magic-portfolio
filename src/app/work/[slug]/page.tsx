@@ -118,6 +118,20 @@ export default async function Project({
           </Text>
         </Row>
       </Row>
+      {(post.metadata.link || post.metadata.githubUrl || post.metadata.liveUrl) && (
+        <Row gap="12" wrap horizontal="center">
+          {(post.metadata.githubUrl || post.metadata.link) && (
+            <Button href={post.metadata.githubUrl || post.metadata.link} variant="primary" size="m" suffixIcon="arrowUpRightFromSquare">
+              GitHub
+            </Button>
+          )}
+          {post.metadata.liveUrl && (
+            <Button href={post.metadata.liveUrl} variant="secondary" size="m" suffixIcon="arrowUpRightFromSquare">
+              Live demo
+            </Button>
+          )}
+        </Row>
+      )}
       {post.metadata.images.length > 0 && (
         <Media priority radius="m" alt="image" src={post.metadata.images[0]} />
       )}

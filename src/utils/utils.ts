@@ -19,7 +19,10 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
-  category?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  category?: string | string[];
+  categories?: string[];
   figmaUrl?: string;
 };
 
@@ -51,7 +54,10 @@ function readMDXFile(filePath: string) {
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
-    category: data.category || "",
+    liveUrl: data.liveUrl || "",
+    githubUrl: data.githubUrl || '',
+    category: data.categories || data.category || "",
+    categories: data.categories || [],
     figmaUrl: data.figmaUrl || "",
   };
 

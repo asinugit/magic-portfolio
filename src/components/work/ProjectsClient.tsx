@@ -21,7 +21,10 @@ type ProjectMetadata = {
   tag?: string;
   team: Team[];
   link?: string;
-  category?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  category?: string | string[];
+  categories?: string[];
 };
 
 type Project = {
@@ -48,13 +51,19 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
   // Get category counts
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === "all") return projects.length;
-    return projects.filter(p => p.metadata.category === categoryId).length;
+    return projects.filter((p) => {
+      const categories = p.metadata.categories ?? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category]);
+      return categories.includes(categoryId);
+    }).length;
   };
 
   // Filter projects based on selected category
   const filteredProjects = filter === "all" 
     ? projects 
-    : projects.filter(p => p.metadata.category === filter);
+    : projects.filter((p) => {
+        const categories = p.metadata.categories ?? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category]);
+        return categories.includes(filter);
+      });
 
   return (
     <>
@@ -95,7 +104,9 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
               content={post.content}
               avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
               link={post.metadata.link || ""}
-              category={post.metadata.category}
+              liveUrl={post.metadata.liveUrl || ""}
+              githubUrl={post.metadata.githubUrl || ""}
+              category={post.metadata.categories || post.metadata.category}
             />
           ))
         )}

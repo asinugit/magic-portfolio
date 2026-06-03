@@ -38,16 +38,13 @@ src/resources/content.js
 Add a new .mdx file to src/app/blog/posts or src/app/work/projects
 ```
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+Magic Portfolio was built with [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
 ## Documentation
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+Project documentation is included in the repository and in the app content files.
 
 ## Features
-
-### Once UI
-- All tokens, components & features of [Once UI](https://once-ui.com)
 
 ### SEO
 - Automatic open-graph and X image generation with next/og
@@ -56,7 +53,7 @@ Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfo
 ### Design
 - Responsive layout optimized for all screen sizes
 - Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+- Endless customization options through data attributes
 
 ### Content
 - Render sections conditionally based on the content file
@@ -75,14 +72,13 @@ Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://
 ## Get involved
 
 - Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
-- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
 
 ## License
 
 Distributed under the CC BY-NC 4.0 License.
 - Attribution is required.
 - Commercial usage is not allowed.
-- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a commercial license.
 
 See `LICENSE.txt` for more information.
 

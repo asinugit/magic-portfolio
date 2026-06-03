@@ -19,7 +19,10 @@ interface ProjectCardProps {
   description: string;
   avatars: { src: string }[];
   link: string;
-  category?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  category?: string | string[];
+  categories?: string[];
   figmaUrl?: string;
 }
 
@@ -31,6 +34,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
+  liveUrl,
+  githubUrl,
   category,
   figmaUrl,
 }) => {
@@ -56,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <Column gap="s" fillWidth>
               {category && (
                 <Text variant="body-default-xs" onBackground="neutral-weak">
-                  {category}
+                  {Array.isArray(category) ? category.join(" · ") : category}
                 </Text>
               )}
               <Heading as="h2" wrap="balance" variant="heading-strong-xl">
@@ -83,22 +88,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   <Text variant="body-default-s">Read case study</Text>
                 </SmartLink>
               )}
-              {true && (
+              {(githubUrl || link) && (
                 <SmartLink
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={figmaUrl || "https://figma.com"}
+                  href={githubUrl || link}
                 >
-                  <Text variant="body-default-s">View in Figma</Text>
+                  <Text variant="body-default-s">GitHub</Text>
                 </SmartLink>
               )}
-              {link && (
+              {liveUrl && (
                 <SmartLink
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={link}
+                  href={liveUrl}
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  <Text variant="body-default-s">Live demo</Text>
+                </SmartLink>
+              )}
+              {figmaUrl && (
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={figmaUrl}
+                >
+                  <Text variant="body-default-s">View in Figma</Text>
                 </SmartLink>
               )}
             </Flex>
