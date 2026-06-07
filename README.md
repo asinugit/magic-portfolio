@@ -2,7 +2,7 @@
 
 This is the portfolio of Asinu Kumarage, a Software Engineer.
 
-![Asinu Kumarage](/public/images/avatar.png)
+![Asinu Kumarage](/public/images/asinuu.png)
 
 Hello! I'm Asinu, a passionate Software Engineer specializing in web development and designing intuitive user experiences. I love building innovative solutions and exploring new technologies.
 
