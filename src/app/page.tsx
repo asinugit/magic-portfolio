@@ -125,10 +125,12 @@ export default function Home() {
             id="scroll-about"
             href={about.path}
             variant="tertiary"
-            size="m"
-            weight="default"
+            size="l"
+            weight="strong"
             arrowIcon
             style={{
+              fontSize: "1.05rem",
+              fontWeight: 700,
               animation: 'bounce 2s infinite'
             }}
           >
