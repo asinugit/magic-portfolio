@@ -44,6 +44,12 @@ function readMDXFile(filePath: string) {
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(rawContent);
 
+  const rawCategories = data.categories
+    ? (Array.isArray(data.categories) ? data.categories : [data.categories])
+    : (data.category
+      ? (Array.isArray(data.category) ? data.category : [data.category])
+      : []);
+
   const metadata: Metadata = {
     title: data.title || "",
     subtitle: data.subtitle || "",
@@ -56,8 +62,8 @@ function readMDXFile(filePath: string) {
     link: data.link || "",
     liveUrl: data.liveUrl || "",
     githubUrl: data.githubUrl || '',
-    category: data.categories || data.category || "",
-    categories: data.categories || [],
+    category: rawCategories,
+    categories: rawCategories,
     figmaUrl: data.figmaUrl || "",
   };
 

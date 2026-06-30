@@ -52,7 +52,11 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === "all") return projects.length;
     return projects.filter((p) => {
-      const categories = p.metadata.categories ?? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category]);
+      const categories = p.metadata.categories && p.metadata.categories.length > 0
+        ? p.metadata.categories
+        : (p.metadata.category
+          ? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category])
+          : []);
       return categories.includes(categoryId);
     }).length;
   };
@@ -61,7 +65,11 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
   const filteredProjects = filter === "all" 
     ? projects 
     : projects.filter((p) => {
-        const categories = p.metadata.categories ?? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category]);
+        const categories = p.metadata.categories && p.metadata.categories.length > 0
+          ? p.metadata.categories
+          : (p.metadata.category
+            ? (Array.isArray(p.metadata.category) ? p.metadata.category : [p.metadata.category])
+            : []);
         return categories.includes(filter);
       });
 

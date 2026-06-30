@@ -112,18 +112,54 @@ const about: About = {
     title: "Certificates and Licenses",
     experiences: [
       {
-        company: "Node.js",
-        timeframe: "2024",
-        role: "Certified Developer",
+        company: "MongoDB",
+        timeframe: "2025",
+        role: "MongoDB Node.js Developer Path",
         achievements: [
           <>
-            Official certification demonstrating expertise in Node.js runtime environment, server-side JavaScript development, and modern backend technologies.
+            Official proof of completion demonstrating expertise in connecting, querying, and managing MongoDB databases from Node.js applications.
           </>,
         ],
         images: [
           {
             src: "/images/certificate/node.jpeg",
-            alt: "Node.js Certificate",
+            alt: "MongoDB Node.js Developer Path Certificate",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "University of Moratuwa",
+        timeframe: "2024",
+        role: "Python Programming",
+        achievements: [
+          <>
+            Completed the online learning programme in Python Programming conducted by the Department of Computer Science & Engineering.
+          </>,
+        ],
+        images: [
+          {
+            src: "/images/certificate/p1.jpeg",
+            alt: "Python Programming Certificate",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "University of Moratuwa",
+        timeframe: "2024",
+        role: "Python for Beginners",
+        achievements: [
+          <>
+            Completed the online learning programme in Python for Beginners conducted by the Department of Computer Science & Engineering.
+          </>,
+        ],
+        images: [
+          {
+            src: "/images/certificate/p2.jpeg",
+            alt: "Python for Beginners Certificate",
             width: 16,
             height: 9,
           },
