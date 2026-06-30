@@ -25,6 +25,7 @@ type ProjectMetadata = {
   githubUrl?: string;
   category?: string | string[];
   categories?: string[];
+  presentationUrl?: string;
 };
 
 type Project = {
@@ -115,6 +116,7 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
               liveUrl={post.metadata.liveUrl || ""}
               githubUrl={post.metadata.githubUrl || ""}
               category={post.metadata.categories || post.metadata.category}
+              presentationUrl={post.metadata.presentationUrl || ""}
             />
           ))
         )}

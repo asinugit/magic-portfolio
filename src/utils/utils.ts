@@ -24,6 +24,7 @@ type Metadata = {
   category?: string | string[];
   categories?: string[];
   figmaUrl?: string;
+  presentationUrl?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -65,6 +66,7 @@ function readMDXFile(filePath: string) {
     category: rawCategories,
     categories: rawCategories,
     figmaUrl: data.figmaUrl || "",
+    presentationUrl: data.presentationUrl || "",
   };
 
   return { metadata, content };

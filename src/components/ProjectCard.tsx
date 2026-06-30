@@ -24,6 +24,7 @@ interface ProjectCardProps {
   category?: string | string[];
   categories?: string[];
   figmaUrl?: string;
+  presentationUrl?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -38,6 +39,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   category,
   figmaUrl,
+  presentationUrl,
 }) => {
   return (
     <Column fillWidth gap="m">
@@ -113,6 +115,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={figmaUrl}
                 >
                   <Text variant="body-default-s">View in Figma</Text>
+                </SmartLink>
+              )}
+              {presentationUrl && (
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={presentationUrl}
+                >
+                  <Text variant="body-default-s">Presentation</Text>
                 </SmartLink>
               )}
             </Flex>

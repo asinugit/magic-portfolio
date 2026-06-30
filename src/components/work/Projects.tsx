@@ -41,6 +41,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
           category={post.metadata.categories || post.metadata.category}
           categories={post.metadata.categories}
           figmaUrl={post.metadata.figmaUrl || ""}
+          presentationUrl={post.metadata.presentationUrl || ""}
         />
       ))}
     </Column>

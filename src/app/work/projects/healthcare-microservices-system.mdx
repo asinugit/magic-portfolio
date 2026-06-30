@@ -1,0 +1,83 @@
+---
+title: "Healthcare Microservices System"
+publishedAt: "2026-06-25"
+category: "web development"
+categories:
+  - "web development"
+summary: "A distributed healthcare management system built with Spring Boot and Next.js, featuring a robust microservices architecture containerized using Docker and orchestrated via Kubernetes, with integrated Stripe payment gateway."
+images:
+  - "/images/projects/project-03/m1.png"
+  - "/images/projects/project-03/m2.png"
+  - "/images/projects/project-03/m3.png"
+  - "/images/projects/project-03/m4.png"
+  - "/images/projects/project-03/m5.png"
+  - "/images/projects/project-03/m6.png"
+  - "/images/projects/project-03/m7.png"
+  - "/images/projects/project-03/m8.png"
+  - "/images/projects/project-03/m9.png"
+  - "/images/projects/project-03/m10.png"
+team:
+  - name: "Asinu Kumarage"
+    role: "Software Engineer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/asinuu/"
+githubUrl: "https://github.com/asinugit/healthcare-microservices-system.git"
+presentationUrl: "https://youtu.be/JRhV5ZreMdg?si=VLBatnIWL1oGvTPq"
+---
+
+## Overview
+
+The Healthcare Microservices System is an enterprise-grade digital health platform designed to scale efficiently. Built using a **Microservices Architecture** with a **Spring Boot** backend and a **Next.js** frontend, the entire platform is containerized with **Docker** and orchestrated using **Kubernetes** for high availability and seamless scaling.
+
+My primary contributions to the project were developing and integrating the **Patient Service** and the **Payment Service**, including the integration of the **Stripe Payment Gateway** for secure healthcare billing and transactions.
+
+---
+
+## Architectural Foundation
+
+The core design centers on a highly modular and resilient structure:
+- **Microservices Architecture**: The backend is broken down into autonomous services (including patient, booking, notifications, and payment services) communicating via RESTful APIs and message brokers.
+- **Spring Boot**: Powers the backend microservices, leveraging Spring Cloud for service discovery, centralized configuration, and API gateway routing.
+- **Next.js**: Provides a modern, responsive, and performance-oriented user interface for patient dashboards and admin consoles.
+- **Docker**: Used to package each microservice, the database, and front-end assets into container images.
+- **Kubernetes (K8s)**: Manages container deployment, scaling, load balancing, and self-healing across the production cluster.
+
+---
+
+## My Contributions & Key Features
+
+### 1. Payment Service & Stripe Gateway
+- Designed and implemented the transaction service to handle appointment fees and hospital billing securely.
+- Integrated the **Stripe Payment Gateway** to process online card payments with real-time webhooks verifying transaction status.
+- Implemented transactional outbox patterns to guarantee consistency between booking status and payments.
+
+### 2. Patient Service
+- Built the central Patient management system handling patient registration, medical records retrieval, and profiles.
+- Implemented secure JWT-based authorization and encryption for sensitive user information.
+
+---
+
+## Technologies Used
+
+- **Spring Boot** (Java)
+- **Next.js** (React)
+- **Stripe API**
+- **Docker**
+- **Kubernetes**
+- **Spring Cloud Gateway & Eureka**
+- **PostgreSQL / MongoDB**
+
+---
+
+## Project Presentation
+
+For a complete walkthrough of the architecture, patient workflow, and a live demonstration of the microservices system, you can watch our presentation:
+
+<Row gap="12" wrap>
+  <Button href="https://youtu.be/JRhV5ZreMdg?si=VLBatnIWL1oGvTPq" variant="primary" size="m" suffixIcon="arrowUpRightFromSquare">
+    Watch Video Presentation
+  </Button>
+  <Button href="https://github.com/asinugit/healthcare-microservices-system.git" variant="secondary" size="m" suffixIcon="arrowUpRightFromSquare">
+    GitHub Repository
+  </Button>
+</Row>
