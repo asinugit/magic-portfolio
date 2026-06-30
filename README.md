@@ -7,7 +7,7 @@ This is the portfolio of Asinu Kumarage, a Software Engineer.
 Hello! I'm Asinu, a passionate Software Engineer specializing in web development and designing intuitive user experiences. I love building innovative solutions and exploring new technologies.
 
 Find me on:
-[GitHub](https://github.com/asinugit) | [LinkedIn](https://www.linkedin.com/in/asinuu/) | [Instagram](https://www.instagram.com/asinuu._/) | [Email](mailto:asinuu07@gmail.com)
+[GitHub](https://github.com/asinugit) | [LinkedIn](https://www.linkedin.com/in/asinuuu/) | [Instagram](https://www.instagram.com/asinuu._/) | [Email](mailto:asinuu07@gmail.com)
 
 ## Skills
 
